@@ -1,0 +1,151 @@
+.header {
+  height: 60px;
+  background-color: #000;
+  margin: 0 auto;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 10px; // Add some padding for smaller screens
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 35px;
+    margin-bottom: 13px;
+    vertical-align: bottom;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 20px;
+    padding: 10px;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      color: yellow;
+    }
+
+    &.active {
+      color: purple;
+      border: 1px solid purple;
+      border-radius: 3px;
+    }
+
+    &__favorites {
+      position: relative;
+      padding: 0;
+      border: none;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .header__favorites-count {
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        background-color: red;
+        color: #fff;
+        border-radius: 50%;
+        padding: 2px 6px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// Responsive styling
+@media (max-width: 1024px) { // Tablet
+  .header {
+    height: 50px;
+
+    &__logo {
+      width: 30px;
+    }
+
+    &__link {
+      font-size: 14px;
+      margin-left: 10px;
+    }
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 375px) { // iPhone SE
+  .header {
+    height: 50px;
+
+    &__logo {
+      width: 25px;
+    }
+
+    &__link {
+      font-size: 12px;
+      margin-left: 5px;
+    }
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 430px) { // iPhone 14 Pro Max
+  .header {
+    height: 50px;
+
+    &__logo {
+      width: 28px;
+    }
+
+    &__link {
+      font-size: 13px;
+      margin-left: 8px;
+    }
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}
+
+// Adjust background to cover the full height of the page
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+  
+  
